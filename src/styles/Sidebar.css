@@ -1,0 +1,41 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #2f3136; /* Dark background for the sidebar */
+  width: 240px; /* Fixed width */
+  height: 100vh; /* Full viewport height */
+  padding: 15px; /* Inner padding */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.sidebar-item {
+  margin: 5px 0; /* Margin between items */
+  padding: 12px; /* Inner padding for items */
+  background: #40444b; /* Darker background for items */
+  color: #fff; /* White text for readability */
+  border: none; /* No border */
+  text-align: left; /* Left-aligned text */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  font-size: 16px; /* Font size for item text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.2s, transform 0.2s; /* Smooth background color change */
+}
+
+/* Hover effect for sidebar items */
+.sidebar-item:hover {
+  background-color: #5865f2; /* Change background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Active sidebar item styling */
+.sidebar-item.active {
+  background-color: #5865f2; /* Active item color */
+  font-weight: bold; /* Bold text for the active item */
+}
+
+/* Focus styles for accessibility */
+.sidebar-item:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.5); /* Custom focus outline */
+}

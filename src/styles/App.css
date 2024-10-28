@@ -1,0 +1,47 @@
+/* src/styles/App.css */
+.app-container {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+.sidebar {
+  width: 250px;
+  background: #333; /* Dark background for the sidebar */
+  color: white; /* White text for readability */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.sidebar-item {
+  margin: 10px 0;
+  background: #555; /* Background for each sidebar item */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px; /* Rounded corners for a modern look */
+}
+
+.sidebar-item:hover {
+  background: #777; /* Lighter background on hover */
+}
+
+.sidebar-item:focus {
+  outline: none; /* Remove the default outline on focus */
+  background: #888; /* Change background when focused */
+}
+
+/* Add styles for active sidebar item */
+.sidebar-item.active {
+  background: #777; /* Active item color */
+  font-weight: bold; /* Bold text for active item */
+}
+
+/* Style for main content area */
+.main-content {
+  flex-grow: 1; /* Allow the main content to take up remaining space */
+  padding: 20px; /* Padding around the main content */
+  background-color: #f4f4f4; /* Light background for contrast */
+}

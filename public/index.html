@@ -1,0 +1,54 @@
+// index.js
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
+// Function to create the main application window
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 1024,
+    height: 768,
+    minWidth: 800, // Minimum width for better UI
+    minHeight: 600, // Minimum height
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'), // Preload script
+      contextIsolation: true, // Recommended for security
+      enableRemoteModule: false, // Disable remote module for security
+      nodeIntegration: false, // Disable Node.js integration to enhance security
+    }
+  });
+
+  // Load the HTML file and handle any errors
+  win.loadFile(path.join(__dirname, 'public', 'index.html'))
+    .then(() => {
+      console.log('Window loaded successfully');
+    })
+    .catch(err => {
+      console.error('Failed to load the index.html:', err);
+      app.quit(); // Exit the application if loading fails
+    });
+
+  // Open the DevTools for development (remove in production)
+  win.webContents.openDevTools();
+}
+
+// Handle application lifecycle events
+app.whenReady().then(createWindow);
+
+app.on('activate', () => {
+  // Recreate a window when the app is activated
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createWindow();
+  }
+});
+
+app.on('window-all-closed', () => {
+  // Quit the application when all windows are closed, except on macOS
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+});
+
+// Handle unhandled exceptions to prevent crashes
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+});

@@ -1,0 +1,59 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  background-color: #f4f4f4; /* Light background for better contrast */
+}
+
+/* App container styling */
+.app-container {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh; /* Make the app container full height */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background: #2c2f33; /* Darker background for the sidebar */
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+/* Sidebar item styling */
+.sidebar-item {
+  margin: 10px 0;
+  background: #40444b; /* Darker button background */
+  color: white;
+  border: none;
+  padding: 12px 15px; /* Increased padding for better touch targets */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Consistent font size */
+  transition: background 0.3s ease, transform 0.2s ease; /* Add transform effect */
+}
+
+/* Sidebar item hover effect */
+.sidebar-item:hover {
+  background: #5865f2; /* Lighter hover background */
+  transform: translateY(-1px); /* Subtle lift effect on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height automatically */
+  }
+  
+  .sidebar-item {
+    padding: 10px; /* Decrease padding on smaller screens */
+  }
+}

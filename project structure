@@ -1,0 +1,47 @@
+my-app/
+├── README.md                  
+├── index.js                   
+├── preload.js                 
+├── package.json               
+├── package-lock.json          
+├── yarn.lock                  
+├── public/                    
+│   ├── assets/                
+│   ├── index.html             
+│   └── styles.css             
+├── src/                       
+│   ├── App.js                 
+│   ├── index.js               
+│   ├── styles/                
+│   │   └── App.css            
+│   ├── components/            
+│   │   ├── Sidebar.jsx        
+│   │   ├── EnhancedButton.jsx 
+│   │   ├── ClothingDisplay.jsx 
+│   │   ├── BodyTypeSelector.jsx 
+│   │   ├── ChestSizeSelector.jsx 
+│   │   ├── ButtSizeSelector.jsx 
+│   │   ├── HairColorSelector.jsx 
+│   │   └── TattooToggle.jsx     
+│   ├── pages/                 
+│   │   ├── Dashboard.jsx      
+│   │   ├── ClothingChange.jsx 
+│   │   ├── PhotoEditor.jsx    
+│   │   ├── VideoEditor.jsx    
+│   │   └── FaceChange.jsx     
+│   ├── services/              
+│   │   └── api.js             
+│   └── socket.js              
+├── server/                    
+│   ├── index.js               
+│   ├── controllers/           
+│   │   └── dataController.js  
+│   ├── middleware/            
+│   │   └── auth.js            
+│   └── routes/                
+│       └── dataRoutes.js      
+└── tests/                     
+    ├── integration/           
+    │   └── api.test.js        
+    └── unit/                  
+        └── app.test.js        
