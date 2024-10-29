@@ -12,7 +12,7 @@ const App = () => {
     <Router>
       <div className="app-container">
         <Sidebar />
-        <main className="main-content"> {/* Added a main content area for better layout */}
+        <main className="main-content"> {/* Main content area for layout */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/photo-editor" element={<PhotoEditor />} />

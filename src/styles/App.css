@@ -11,6 +11,7 @@
   color: white; /* White text for readability */
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  overflow-y: auto; /* Enable scrolling if the sidebar content overflows */
 }
 
 .sidebar-item {
@@ -18,10 +19,11 @@
   background: #555; /* Background for each sidebar item */
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px; /* Added horizontal padding for better touch targets */
   cursor: pointer;
   transition: background 0.3s ease;
   border-radius: 4px; /* Rounded corners for a modern look */
+  text-align: left; /* Align text to the left for better readability */
 }
 
 .sidebar-item:hover {
@@ -44,4 +46,12 @@
   flex-grow: 1; /* Allow the main content to take up remaining space */
   padding: 20px; /* Padding around the main content */
   background-color: #f4f4f4; /* Light background for contrast */
+  overflow-y: auto; /* Enable scrolling if the content overflows */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+/* Optional: Add a transition for the sidebar when it’s active */
+.sidebar.active {
+  width: 300px; /* Optional expanded width for active state */
+  transition: width 0.3s ease; /* Smooth transition for width change */
 }
